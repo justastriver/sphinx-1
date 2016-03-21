@@ -24,7 +24,7 @@ $ cp xdict /usr/local/sphinx/etc/
 
 修改sphinx.conf索引配置文件
 
-在索引配置项中添加以下两项
+在索引配置项中添加以下两项 (index test1)
 charset_type = utf-8
 chinese_dictionary = /usr/local/sphinx/etc/xdict
 
@@ -33,3 +33,12 @@ sql_query_pre = SET NAMES utf8
 否则中文分词无法起作用。
 
 至此，完成中文支持配置。
+
+
+建立索引
+/usr/local/sphinx/bin/indexer -all
+
+查询测试
+cd api/
+python test.py xxxx
+php test.php xxx
